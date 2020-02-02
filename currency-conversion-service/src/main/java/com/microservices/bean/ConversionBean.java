@@ -7,7 +7,7 @@ public class ConversionBean {
 	private long id;
 	private String from;
 	private String to;
-	private BigDecimal conversionRate;
+	private BigDecimal exchangeRate;
 	private BigDecimal quantity;
 	private BigDecimal totalValue;
 	private BigDecimal port;
@@ -16,13 +16,13 @@ public class ConversionBean {
 		super();
 	}
 
-	public ConversionBean(long id, String from, String to, BigDecimal conversionRate, BigDecimal quantity,
+	public ConversionBean(long id, String from, String to, BigDecimal exchangeRate, BigDecimal quantity,
 			BigDecimal totalValue, BigDecimal port) {
 		super();
 		this.id = id;
 		this.from = from;
 		this.to = to;
-		this.conversionRate = conversionRate;
+		this.exchangeRate = exchangeRate;
 		this.quantity = quantity;
 		this.totalValue = totalValue;
 		this.port = port;
@@ -52,12 +52,12 @@ public class ConversionBean {
 		this.to = to;
 	}
 
-	public BigDecimal getConversionRate() {
-		return conversionRate;
+	public BigDecimal getExchangeRate() {
+		return exchangeRate;
 	}
 
-	public void setConversionRate(BigDecimal conversionRate) {
-		this.conversionRate = conversionRate;
+	public void setExchangeRate(BigDecimal exchangeRate) {
+		this.exchangeRate = exchangeRate;
 	}
 
 	public BigDecimal getQuantity() {
@@ -86,7 +86,7 @@ public class ConversionBean {
 
 	@Override
 	public String toString() {
-		return "ConversionBean [id=" + id + ", from=" + from + ", to=" + to + ", conversionRate=" + conversionRate
+		return "ConversionBean [id=" + id + ", from=" + from + ", to=" + to + ", exchangeRate=" + exchangeRate
 				+ ", quantity=" + quantity + ", totalValue=" + totalValue + ", port=" + port + "]";
 	}
 

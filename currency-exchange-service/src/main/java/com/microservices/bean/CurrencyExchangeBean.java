@@ -2,11 +2,25 @@ package com.microservices.bean;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity(name = "exchange_rates")
 public class CurrencyExchangeBean {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
+	
+	@Column(name = "convert_from")
 	private String from;
+	
+	@Column(name = "convert_to")
 	private String to;
+	
 	private BigDecimal exchangeRate;
 	private BigDecimal port;
 
